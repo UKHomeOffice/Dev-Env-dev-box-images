@@ -29,11 +29,11 @@
 publisher: Contoso
 offer: DevBox
 replicaLocations:
-  - eastus
+  - uksouth
   - westeurope
-buildResourceGroup: Contoso-Images
-keyVault: contosoimageskv
-virtualNetwork: contoso-images-vnet
-virtualNetworkSubnet: default
-virtualNetworkResourceGroup: Contoso-Images
-subscription: 00000000-0000-0000-0000-000000000000
+buildResourceGroup: O365-Dev-PublicDevBox-RG
+keyVault: O365-Dev-PDB-KeyVault
+virtualNetwork: aadds-vnet
+virtualNetworkSubnet: aadds-subnet
+virtualNetworkResourceGroup: NI_PublicDevBox-Nic_uksouth
+subscription: 23aa2b24-887c-4acd-9d74-879e416aa797
