@@ -37,3 +37,4 @@ virtualNetwork: aadds-vnet
 virtualNetworkSubnet: aadds-subnet
 virtualNetworkResourceGroup: NI_PublicDevBox-Nic_uksouth
 subscription: 23aa2b24-887c-4acd-9d74-879e416aa797
+
