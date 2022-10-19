@@ -29,7 +29,7 @@
 publisher: Contoso
 offer: DevBox
 replicaLocations:
-  - uksouth
+  - ukwest
 buildResourceGroup: O365-Dev-PublicDevBox-RG
 keyVault: O365-Dev-PDB-KeyVault
 virtualNetwork: aadds-vnet
