@@ -36,4 +36,4 @@ jobs:
         run: az bicep upgrade
 
       - name: Deploy Build ACI Containers
-        run: python "./builder/build.py" --async --repository "${{ github.repositoryUrl }}" --revision "${{ github.sha }}" --token "${{ github.token }}" --client-id "${{ secrets.AZURE_CLIENT_ID }}" --client-secret "${{ secrets.AZURE_CLIENT_SECRET }}" --storage-account "${devboximagestorageacct}" --subnet-id "${"/subscriptions/23aa2b24-887c-4acd-9d74-879e416aa797/resourceGroups/O365-Dev-WVD-RG-ukwest/providers/Microsoft.Network/virtualNetworks/aadds-vnet/subnets/VMs-subnet"}"
+        run: python "./builder/build.py" --async --repository "${{ github.repositoryUrl }}" --revision "${{ github.sha }}" --token "${{ github.token }}" --client-id "${{ secrets.AZURE_CLIENT_ID }}" --client-secret "${{ secrets.AZURE_CLIENT_SECRET }}" --storage-account "${devboximagestorageacct}" --subnet-id "${/subscriptions/23aa2b24-887c-4acd-9d74-879e416aa797/resourceGroups/O365-Dev-WVD-RG-ukwest/providers/Microsoft.Network/virtualNetworks/aadds-vnet/subnets/VMs-subnet}"
