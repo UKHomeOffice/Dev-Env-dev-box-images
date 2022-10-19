@@ -19,8 +19,10 @@ jobs:
     if: "!contains(join(github.event.commits.*.message), '+nobuild')"
 
     env:
-      STORAGE_ACCOUNT: contosoimagesstorage
-      SUBNET_ID: /subscriptions/e5f715ae-6c72-4a5c-87c8-495590c34828/resourceGroups/Contoso-Images/providers/Microsoft.Network/virtualNetworks/contoso-images-vnet/subnets/builders
+      #STORAGE_ACCOUNT: contosoimagesstorage
+      #SUBNET_ID: /subscriptions/e5f715ae-6c72-4a5c-87c8-495590c34828/resourceGroups/Contoso-Images/providers/Microsoft.Network/virtualNetworks/contoso-images-vnet/subnets/builders
+      STORAGE_ACCOUNT: devboximagestorageacct
+      SUBNET_ID: /subscriptions/23aa2b24-887c-4acd-9d74-879e416aa797/resourceGroups/O365-Dev-WVD-RG-ukwest/providers/Microsoft.Network/virtualNetworks/aadds-vnet/subnets/VMs-subnet
 
     steps:
       - uses: actions/checkout@v2
@@ -36,4 +38,4 @@ jobs:
         run: az bicep upgrade
 
       - name: Deploy Build ACI Containers
-        run: python "./builder/build.py" --async --repository "${{ github.repositoryUrl }}" --revision "${{ github.sha }}" --token "${{ github.token }}" --client-id "${{ secrets.AZURE_CLIENT_ID }}" --client-secret "${{ secrets.AZURE_CLIENT_SECRET }}" --storage-account "${devboximagestorageacct}" --subnet-id "${/subscriptions/23aa2b24-887c-4acd-9d74-879e416aa797/resourceGroups/O365-Dev-WVD-RG-ukwest/providers/Microsoft.Network/virtualNetworks/aadds-vnet/subnets/VMs-subnet}"
+        run: python "./builder/build.py" --async --repository "${{ github.repositoryUrl }}" --revision "${{ github.sha }}" --token "${{ github.token }}" --client-id "${{ secrets.AZURE_CLIENT_ID }}" --client-secret "${{ secrets.AZURE_CLIENT_SECRET }}" --storage-account "${devboximagestorageacct}" --subnet-id "${{ env.SUBNET_ID }}"
