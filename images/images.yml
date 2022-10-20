@@ -31,7 +31,7 @@ offer: DevBox
 replicaLocations:
   - uksouth
 buildResourceGroup: O365-Dev-PublicDevBox-RG
-keyVault: O365-Dev-KeyVault
+keyVault: O365-Dev-PDB-KeyVault2
 virtualNetwork: aadds-vnet
 virtualNetworkSubnet: aadds-subnet
 virtualNetworkResourceGroup: NI_O365-Dev-DevboxDevCenter-con_uksouth
